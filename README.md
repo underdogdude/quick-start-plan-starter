@@ -9,6 +9,7 @@ This is quick start plan starter pack for Doctor Marketing Plus
 6. Install essential plug-in
 7. Set Primary color , Hover color and so on.
 8. Add Logo.
+9. Chage Screenshot.png for your theme.
 
 ## Plug-in lists
 | Require | Optional |
