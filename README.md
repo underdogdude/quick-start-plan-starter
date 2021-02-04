@@ -33,4 +33,5 @@ This is quick start plan starter pack for Doctor Marketing Plus
 - Add google analytics code.
 - Active SG Optimize plug-in
 - Install Anti-spam/virus plug-in
+- Ensure that Feature images has been added in all pages.
 
