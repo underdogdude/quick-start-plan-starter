@@ -25,7 +25,6 @@
 
                 <div class="site-branding">
                     <div class="site-logo"><?php seed_logo(); ?></div>
-                    <?php seed_title(); ?>
                 </div>
 
                 <div class="site-toggle"><b></b></div>

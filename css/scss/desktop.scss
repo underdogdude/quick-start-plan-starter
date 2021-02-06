@@ -9,6 +9,7 @@ body.headbar-d {
   min-height: var(--s-header-height);
   background-color: var(--s-bg);
   line-height: 1;
+  border-top: 8px solid var(--s-accent);
   > .s-container {
     position: relative;
     min-height: var(--s-header-height);
@@ -45,6 +46,7 @@ body.headbar-d {
   transform: none;
   img {
     max-height: var(--s-header-height);
+    padding: 5px;
   }
 }
 .site-title {
@@ -79,8 +81,37 @@ body.headbar-d {
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    text-transform: uppercase;
+    font-weight: 600;
+     // Bright Create Hover Underline
+     position: relative;
     a {
       padding: 10px 15px;
+      // Bright Create Hover Underline
+      &:hover { 
+        &:after { 
+          opacity: 1;
+          -webkit-transform: scale(1);
+          transform: scale(1);
+        }
+      }
+      // Bright Create Hover Underline
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        display: inline-block;
+        height: 1em;
+        width: 100%;
+        border-bottom: 3px solid var(--s-accent);
+        margin-top: 10px;
+        opacity: 0;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: scale(0,1);
+        transform: scale(0,1);
+      }
     }
     &:hover {
       > .sub-menu {
