@@ -356,7 +356,7 @@ if(!class_exists('ACFSocial')) {
                                     break;
                                 case "linkedin":
                                     echo "<a href='//". $row['social_url'] ."' target='_blank' class='icon-link'>";
-                                    echo seed_icon('s-linkedin');
+                                    echo seed_icon('linkedin');
                                     break;
                                 case "messenger":
                                     echo "<a href='http://m.me/". $row['social_url'] ."' target='_blank' class='icon-link'>";

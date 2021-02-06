@@ -2,6 +2,9 @@
     <!--#content-->
     <aside id="footbar" class="site-footbar">
         <div class="s-container">
+            <h1 class="site-footer-title">
+                <?php echo get_bloginfo( 'name' ); ?>
+            </h1>
             <div class="s-grid -d2">
                 <?php dynamic_sidebar( 'footbar' ); ?>
             </div>

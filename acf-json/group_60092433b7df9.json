@@ -1,0 +1,98 @@
+{
+    "key": "group_60092433b7df9",
+    "title": "Footer Social Media",
+    "fields": [
+        {
+            "key": "field_60092446e0543",
+            "label": "Footer Social",
+            "name": "footer_social",
+            "type": "repeater",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "collapsed": "",
+            "min": 0,
+            "max": 0,
+            "layout": "table",
+            "button_label": "",
+            "sub_fields": [
+                {
+                    "key": "field_6009245ae0544",
+                    "label": "Social Name",
+                    "name": "social_name",
+                    "type": "select",
+                    "instructions": "For Line and Messenger, insert only \"ID\".",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "choices": {
+                        "facebook": "Facebook",
+                        "twitter": "Twitter",
+                        "instagram": "Instagram",
+                        "line": "Line",
+                        "youtube": "Youtube",
+                        "vimeo": "Vimeo",
+                        "pinterest": "Pinterest",
+                        "linkedin": "Linkedin",
+                        "messenger": "Messenger",
+                        "mail": "Email",
+                        "other": "Other"
+                    },
+                    "default_value": [],
+                    "allow_null": 0,
+                    "multiple": 0,
+                    "ui": 0,
+                    "return_format": "value",
+                    "ajax": 0,
+                    "placeholder": ""
+                },
+                {
+                    "key": "field_60092480e0545",
+                    "label": "Social Url",
+                    "name": "social_url",
+                    "type": "text",
+                    "instructions": "URL must NOT include \"http\" or \"https\"",
+                    "required": 1,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                }
+            ]
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "widget",
+                "operator": "==",
+                "value": "acf_social_widget"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1611211933
+}
