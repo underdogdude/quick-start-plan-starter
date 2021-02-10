@@ -30,7 +30,7 @@ if (!isset($GLOBALS['s_member_label']))         {$GLOBALS['s_member_label']     
 if (!isset($GLOBALS['s_keen_slider']))          {$GLOBALS['s_keen_slider']          = 'enable';}        // disable, enable
 if (!isset($GLOBALS['s_style_css']))            {$GLOBALS['s_style_css']            = 'disable';}       // disable, enable
 if (!isset($GLOBALS['s_jquery']))               {$GLOBALS['s_jquery']               = 'disable';}       // disable, enable
-if (!isset($GLOBALS['s_fontawesome']))          {$GLOBALS['s_fontawesome']          = 'disable';}       // disable, enable
+if (!isset($GLOBALS['s_fontawesome']))          {$GLOBALS['s_fontawesome']          = 'enable';}       // disable, enable
 if (!isset($GLOBALS['s_wp_comments']))          {$GLOBALS['s_wp_comments']          = 'disable';}       // disable, enable
 if (!isset($GLOBALS['s_admin_bar']))            {$GLOBALS['s_admin_bar']            = 'hide';}          // hide, show
 
@@ -323,55 +323,97 @@ if(!class_exists('ACFSocial')) {
             if(!empty($footer_social)) {
             ?>  
                 <section class="widget widget-social">
+                    <div class="s-grid -d6 -m3">
                     <?php  
                         foreach($footer_social as $row){
                             switch ($row['social_name']) {
                                 case "facebook":
+                                    echo "<div class='social-wrap'>";
                                     echo "<a href='//". $row['social_url'] ."' target='_blank' class='icon-link'>";
-                                    echo seed_icon('facebook');
+                                    echo seed_icon('s-facebook');
+                                    echo "<p>Doctor Tiroides </br> Philip James</p>";
+                                    echo "</a>";
+                                    echo "</div>";
                                     break; 
                                 case "twitter":
+                                    echo "<div class='social-wrap'>";
                                     echo "<a href='//". $row['social_url'] ."' target='_blank' class='icon-link'>";
-                                    echo seed_icon('twitter');
+                                    echo seed_icon('s-twitter');
+                                    echo "<p>Philip James </br> Doctor Thyroid</p>";
+                                    echo "</a>";
+                                    echo "</div>";
                                     break;
                                 case "instagram":
+                                    echo "<div class='social-wrap'>";
                                     echo "<a href='//". $row['social_url'] ."' target='_blank' class='icon-link'>";
                                     echo seed_icon('instagram');
+                                    echo "<p>Philip James</p>";
+                                    echo "</a>";
+                                    echo "</div>";
                                     break;
                                 case "line":
+                                    echo "<div class='social-wrap'>";
                                     echo "<a href='http://line.me/ti/p/~". $row['social_url'] ."' target='_blank' class='icon-link'>";
                                     echo seed_icon('s-line');
+                                    echo "</div>";
                                     break;
                                 case "youtube":
+                                    echo "<div class='social-wrap'>";
                                     echo "<a href='//". $row['social_url'] ."' target='_blank' class='icon-link'>";
                                     echo seed_icon('s-youtube');
+                                    echo "<p>Philip James </br> Media</p>";
+                                    echo "</a>";
+                                    echo "</div>";
                                     break;
                                 case "vimeo":
+                                    echo "<div class='social-wrap'>";
                                     echo "<a href='//". $row['social_url'] ."' target='_blank' class='icon-link'>";
                                     echo seed_icon('s-vimeo');
+                                    echo "</div>";
                                     break;
                                 case "pinterest":
+                                    echo "<div class='social-wrap'>";
                                     echo "<a href='//". $row['social_url'] ."' target='_blank' class='icon-link'>";
                                     echo seed_icon('s-pinterest');
+                                    echo "</div>";
                                     break;
                                 case "linkedin":
+                                    echo "<div class='social-wrap'>";
                                     echo "<a href='//". $row['social_url'] ."' target='_blank' class='icon-link'>";
-                                    echo seed_icon('linkedin');
+                                    echo seed_icon('s-linkedin');
+                                    echo "<p>Philip James</p>";
+                                    echo "</a>";
+                                    echo "</div>";
                                     break;
                                 case "messenger":
+                                    echo "<div class='social-wrap'>";
                                     echo "<a href='http://m.me/". $row['social_url'] ."' target='_blank' class='icon-link'>";
                                     echo seed_icon('s-messenger');
+                                    echo "</div>";
                                     break;
                                 case "mail":
+                                    echo "<div class='social-wrap'>";
                                     echo "<a href='mailto:". $row['social_url'] ."' target='_blank' class='icon-link'>";
                                     echo seed_icon('mail');
+                                    echo "</div>";
+                                    break;
+                                case "podcast":
+                                    echo "<div class='social-wrap'>";
+                                    echo "<a href='mailto:". $row['social_url'] ."' target='_blank' class='icon-link'>";
+                                    echo "<i class='fas fa-podcast'></i>";
+                                    echo "<p>Philip James </br> iTunes</p>";
+                                    echo "</a>";
+                                    echo "</div>";
                                     break;
                                 default:
+                                    echo "<div class='social-wrap'>";
                                     echo "<a href='//". $row['social_url'] ."' target='_blank' class='icon-link'>";
                                     echo seed_icon('globe');
+                                    echo "</div>";
                             }
                             echo "</a>";
                         } ?>
+                    </div>
                 </section>
             <?php
           }

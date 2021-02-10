@@ -872,10 +872,9 @@ body.page-template-page-form .site-content {
   left: 0;
   right: 0;
   color: #eee;
-  background-color: var(--s-bg);
   min-height: var(--s-footer-height);
-  background-color: var(--s-accent);
-  border-top: 1px solid #3386ff;
+  background-color: var(--s-bg);
+  border-top: 1px solid #303e58;
   a {
     font-weight: bold;
     color: var(--s-accent-hover);
@@ -897,30 +896,82 @@ body.page-template-page-form .site-content {
 .site-footbar {
   background-color: var(--s-accent);
   border-top: 8px solid var(--s-accent-hover);
-  padding: calc(var(--s-space));
   color: #fff;
+  .footer-1 {
+    padding: calc(var(--s-space));
+    padding-bottom: 0;
+  }
+  .footer-2 {
+    padding: calc(var(--s-space) * 2);
+    padding-bottom: 0;
+    background-color: var(--c-footer-bg);
+    .-inner { 
+      display: grid;
+      grid-template-columns: auto;
+      margin: 0;
+      .footer-nav {
+        display: block;
+        justify-content: space-between;
+        list-style-type: none;
+        padding: 0;
+        padding-top: var(--s-space);
+        li { 
+          margin: 0;
+          line-height: 2;
+          a { 
+            font-weight: bold;
+            color: #fff;
+            transition: var(--c-transition-hover);
+            &:hover { 
+              color: var(--s-accent-hover);
+            }
+          }
+        }
+      }
+    }
+  }
   .widget {
     margin-bottom: 0;
     // Style for social icon.
     &.widget-social { 
-      display: flex;
-      align-items: baseline;
-      justify-content: flex-end;
+      .social-wrap { 
+        padding: calc(var(--s-space) /2);
+        border-right: 1px solid #2b80c7;
+        &:last-child { 
+          border-right:  none;
+        }
+      }
       .icon-link { 
-        background-color: var(--s-tertiary);
         border-radius: 10px;
-        padding: 10px;
         color: white;
         margin-left: 5px;
         margin-right: 5px;
-        height: 50px;
-        width: 50px;
         display: flex;
+        flex-direction: column;
+        text-align: center;
         align-items: center;
         justify-content: center;
         transition: .4s ease all;
+        p { 
+          margin: 10px 0 0 0;
+          font-size: 14px;
+          line-height: 1.3;
+          font-weight: bold;
+        }
+        svg { 
+          width: 25px;
+          height: 25px;
+        }
+        i { 
+          font-size: 25px;
+        }
+        svg , i ,p { 
+          transition: .4s ease all;
+        }
         &:hover { 
-          background-color: var(--s-accent-hover);
+          svg, i, p { 
+            color: var(--s-accent-hover);
+          }
         }
       }
     } 

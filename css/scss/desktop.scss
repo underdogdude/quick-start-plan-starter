@@ -327,3 +327,31 @@ body.page-template-page-form .site-content {
 .site-login {
   max-height: 400px;
 }
+.site-footbar { 
+  .footer-2 {
+    padding-bottom: calc(var(--s-space) * 2);
+    .-inner { 
+      display: grid;
+      grid-template-columns: 20%  auto;
+      list-style-type: none;
+      margin: auto calc(var(--s-space) * 2);
+      display: flex;
+      justify-content: space-between;
+      .footer-nav {
+        display: flex;
+        justify-content: space-between; 
+        li { 
+          margin: auto var(--s-space);
+          a { 
+            font-weight: bold;
+            color: #fff;
+            transition: var(--c-transition-hover);
+            &:hover { 
+              color: var(--s-accent-hover);
+            }
+          }
+        }
+      }
+    }
+  }
+}

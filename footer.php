@@ -1,12 +1,26 @@
-
     <!--#content-->
     <aside id="footbar" class="site-footbar">
-        <div class="s-container">
-            <h1 class="site-footer-title">
-                <?php echo get_bloginfo( 'name' ); ?>
-            </h1>
-            <div class="s-grid -d2">
-                <?php dynamic_sidebar( 'footbar' ); ?>
+        <div class="s-container footer-1">
+            <?php dynamic_sidebar( 'footbar' ); ?>
+        </div>
+        <div class="footer-2">
+            <div class="s-container">
+                <div class="-inner">
+                    <?php echo '<img src="' . esc_url(get_template_directory_uri()) . '/img/PJ-media.svg" alt="' . get_the_title() . '" />';
+                    ?>
+                    <?php
+                        $menus = wp_get_nav_menu_items('Main Menu'); 
+                        if($menus) { 
+                            echo '<ul class="footer-nav">';
+                            foreach( $menus as $menu ) {
+                                if( $menu->menu_item_parent == 0 ) {
+                                    echo '<li><a href="' . $menu->url . '" class="title">' . $menu->title . '</a></li>';
+                                }
+                            }
+                            echo '</ul>';
+                        }
+                    ?>
+                </div>
             </div>
         </div>
     </aside>
@@ -14,7 +28,7 @@
         <footer id="colophon" class="site-footer">
             <div class="s-container">
                 <div class="site-info">
-                    Copyright &copy; <?php echo date("Y"); ?> Doctor Marketing by <a href="https://doctormarketingplus.com/" target="_blank" class="link">Philip James</a>. All Rights Reserved.
+                    Copyright &copy; <?php echo date("Y"); ?><strong> Philip James</strong>. All Rights Reserved.
                 </div>
             </div>
         </footer>
