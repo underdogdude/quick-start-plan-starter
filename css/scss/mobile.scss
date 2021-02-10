@@ -40,23 +40,30 @@
     }
   }
 }
+ 
 .site-header {
+  .transparent-header & {
+    background-color: var( --c-header-bg);
+  }
   z-index: 900;
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
-  color: var(--s-text);
+  color: #fff;
   background-color: var(--s-bg);
   min-height: var(--s-header-height);
-  box-shadow: var(--s-shadow);
+  // box-shadow: var(--s-shadow);
   a {
-    color: var(--s-text);
+    color: #fff;
   }
 }
 
 .site-header-space {
   min-height: var(--s-header-height);
+  .transparent-header & {
+    display: none;
+  }
 }
 
 .site-branding {
@@ -110,7 +117,7 @@
       display: block;
       content: "";
       border-radius: 2px;
-      background-color: var(--s-text);
+      background-color: #fff;
       height: 2px;
       position: absolute;
       transform: rotate(0);
@@ -244,7 +251,7 @@
   &.active {
     // MENU OPEN
     height: calc(100vh - var(--s-header-height));
-    background-color: var(--s-bg);
+    background-color: var( --c-header-bg);
     -webkit-overflow-scrolling: touch;
     overflow: scroll;
     opacity: 1;

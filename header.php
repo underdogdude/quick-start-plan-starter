@@ -8,9 +8,18 @@
     <?php wp_head(); ?>
 </head>
 
-<?php $bodyClass = ''; if (is_active_sidebar( 'headbar_d' )) { $bodyClass = 'headbar-d'; } if (is_active_sidebar( 'headbar_m' )) { $bodyClass .= ' headbar-m'; } ?>
 
-<body <?php body_class($bodyClass); ?>>
+
+<?php
+    $is_page = "";
+    if(is_page()) { 
+        $is_page = "transparent-header";
+    }
+?>
+
+<?php $bodyClass = $is_page; if (is_active_sidebar( 'headbar_d' )) { $bodyClass = 'headbar-d ' . $is_page; } if (is_active_sidebar( 'headbar_m' )) { $bodyClass .= ' headbar-m ' . $is_page ; } ?>
+
+<body <?php body_class($bodyClass, $is_page); ?>>
     <?php 
     if ( function_exists( 'wp_body_open' ) ) {
         wp_body_open();

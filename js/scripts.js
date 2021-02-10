@@ -29,6 +29,14 @@ const modalTriggers=document.querySelectorAll(".s-modal-trigger"),bodyBlackout=d
       ** 0 - initial, 1 - up, 2 - down
       */
       curScroll = w.scrollY || doc.scrollTop;
+      
+      // Add Floating Style Navbar.
+      if(curScroll < 120) { 
+        header.classList.remove('floating');
+      }else { 
+        header.classList.add('floating');
+      }
+
       if (curScroll > prevScroll) { 
         //scrolled up
         direction = 2;
