@@ -436,3 +436,25 @@ function register_acf_social_widget()
   register_widget( 'ACFSocial' );
 }
 add_action( 'widgets_init', 'register_acf_social_widget' );
+
+
+
+
+if (function_exists('acf_register_block_type')) {
+    add_action( 'acf/init', 'acf_register_post_slider' );
+}
+function acf_register_post_slider() { 
+    acf_register_block_type(
+        array(
+            'name' => 'post-slider',
+            'title' => 'Post Slider',
+            'description' => __('Fetch post to display as slider'),
+            'render_template' => 'template-parts/blocks/post-slider/post-slider.php',
+            'icon' => array(
+                'foreground' => '#002575',
+                'src' => 'welcome-widgets-menus',
+            ),
+            'keywords' => array('post', 'list')
+        )
+    );
+}

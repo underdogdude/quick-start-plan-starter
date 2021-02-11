@@ -1,0 +1,72 @@
+{
+    "key": "group_6024f64ca37ee",
+    "title": "Post Social Media Feed",
+    "fields": [
+        {
+            "key": "field_6024f6585252e",
+            "label": "Social Media",
+            "name": "social_media",
+            "type": "radio",
+            "instructions": "",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "facebook": "Facebook",
+                "twitter": "Twitter",
+                "instagram": "Instagram",
+                "youtube": "Youtube",
+                "pinterest": "Pinterest",
+                "inkedin": "Linkedin",
+                "podcast": "Podcast"
+            },
+            "allow_null": 0,
+            "other_choice": 0,
+            "default_value": "",
+            "layout": "vertical",
+            "return_format": "value",
+            "save_other_choice": 0
+        },
+        {
+            "key": "field_6024f6a35252f",
+            "label": "Social Media Url",
+            "name": "social_media_url",
+            "type": "text",
+            "instructions": "URL must NOT include \"http\" or \"https\"",
+            "required": 1,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_taxonomy",
+                "operator": "==",
+                "value": "category:social-media-feed"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "default",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": 1,
+    "description": "",
+    "modified": 1613053181
+}

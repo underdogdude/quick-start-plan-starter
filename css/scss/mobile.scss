@@ -980,3 +980,108 @@ body.page-template-page-form .site-content {
     margin-bottom: 0;
   }
 }
+
+
+.c-slider { 
+  margin-top: calc(var(--s-space) * 2);
+  margin-bottom: calc(var(--s-space) * 2);
+  .nav { 
+    .prev::before, .next::before { 
+      border-top-color: var(--s-accent-hover);
+      border-right-color: var(--s-accent-hover);
+    }
+  }
+  .dots { 
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      color: #526A82;
+      &.active { 
+        width: 30px;
+        border-radius: 21px;
+        background: rgb(0,113,203);
+        background: -moz-linear-gradient(140deg, rgba(0,113,203,1) 30%, rgba(8,120,218,1) 61%, rgba(46,214,251,1) 100%);
+        background: -webkit-linear-gradient(140deg, rgba(0,113,203,1) 30%, rgba(8,120,218,1) 61%, rgba(46,214,251,1) 100%);
+        background: linear-gradient(140deg, rgba(0,113,203,1) 30%, rgba(8,120,218,1) 61%, rgba(46,214,251,1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#0071cb",endColorstr="#2ed6fb",GradientType=1);
+      }
+    }
+  }
+}
+
+.content-item {
+  &.-social { 
+    border-radius: 20px;
+    position: relative;
+    &:hover { 
+      .pic { 
+        .pic--inner { 
+          transform: scale(1.12);
+        }
+      }
+    }
+    .pic { 
+      margin-bottom: 0;
+      border-radius: 10px;
+      overflow: hidden;
+      margin: 0;
+      width: 100%;
+      height: auto;
+      .pic--inner { 
+        border-radius: 10px;
+        min-height: 150px;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #091828;
+        transition: var(--c-transition-hover);
+      }
+    }
+    .entry-title { 
+      a { 
+        font-size: 14px;
+        color: #000;
+      }
+    }
+
+    .-name { 
+      position: absolute;
+      right: 20px;
+      top: 0;
+      z-index: 1;
+      height: 40px;
+      width: 40px;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+      background-color: var(--s-accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      svg ,i {
+        color: white;
+      }
+      &.facebook { 
+        background-color: #3b5999;
+      }
+      &.twitter { 
+        background-color: #55acee;
+      }
+      &.instagram { 
+        background-color: #e4405f;
+      }
+      &.youtube { 
+        background-color: #cd201f;
+      }
+      &.pinterest { 
+        background-color: #bd081c;
+      }
+      &.inkedin { 
+        background-color: #0077B5;
+      } 
+      &.podcast { 
+        background-color: #8742bf;
+      }
+    }
+  }
+}
