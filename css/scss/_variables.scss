@@ -94,3 +94,17 @@
   }
 
 }
+
+.border-left { 
+  border-left: 5px solid var(--s-accent-hover);
+  padding-left: var(--s-space);
+}
+
+.post-radius { 
+  article  {
+    border-radius: 20px;
+    img {
+      border-radius: 20px;
+    }
+  }
+}
